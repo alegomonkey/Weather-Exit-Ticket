@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script>
+    async function getWeather() {
+      let response = await fetch("weather.txt");
+      let data = await response.text()
+      document.getElementById("report").innerHTML = data ;
+    }
+  </script>
+</head>
+
+<body>
+  <button onclick="getWeather()">Get Weather!</button>
+  <div id="report"></div>
+</body>
+
+</html>
